@@ -1,7 +1,7 @@
 <template> 
     <div>
      <h1>{{ message }}</h1>
-     <app-input :msg="message"></app-input>
+     <app-input :msg="message" @messChange="message = $event"></app-input>
     </div>
 </template>
 
@@ -11,7 +11,7 @@ import Input from './Field.vue';
 export default {
     data () {
         return {
-            message: 'Прjjобный текст'
+            message: 'Пробный текст'
         }
     },
     components: {
